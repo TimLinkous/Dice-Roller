@@ -13,7 +13,10 @@ def roll_die(num_rolls):
 
 def main():
     while True:
-        user_input = input("Enter the number of dice you would like to roll: ")
+        user_input = input("Enter the number of dice you would like to roll or type 'q' to quit: ")
+        if user_input == 'q':
+            print("Goodbye!")
+            break
         try:
             num_rolls = int(user_input) 
             roll_die(num_rolls)
